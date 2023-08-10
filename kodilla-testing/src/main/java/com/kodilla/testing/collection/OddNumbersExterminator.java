@@ -7,10 +7,6 @@ import java.util.Random;
 
 public class OddNumbersExterminator {
 
-    public List<Integer> listOfNumbers() {
-        return listOfNumbers();
-    }
-
     public List<Integer> exterminate(List<Integer> listOfNumbers) {
         List<Integer> evenNumbers = new ArrayList<>();
 
