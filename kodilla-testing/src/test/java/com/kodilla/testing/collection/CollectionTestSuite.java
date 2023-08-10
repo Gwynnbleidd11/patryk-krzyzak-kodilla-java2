@@ -1,6 +1,5 @@
 package com.kodilla.testing.collection;
 
-import com.kodilla.testing.user.SimpleUser;
 import org.junit.jupiter.api.*;
 
 import java.util.ArrayList;
@@ -31,7 +30,7 @@ public class CollectionTestSuite {
         List<Integer> emptyList = new ArrayList<>();
 
         //When
-        List<Integer> emptyNumbersList = testCaseEmptyList.exterminate(emptyList);
+        testCaseEmptyList.exterminate(emptyList);
         System.out.println("Testing empty List");
 
         //Then
