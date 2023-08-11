@@ -5,6 +5,7 @@ public class Square implements Shape {
     private double squareBase;
     private double squareHeight;
 
+
     public Square(double squareBase, double squareHeight) {
         this.squareBase = squareBase;
         this.squareHeight = squareHeight;
@@ -12,7 +13,7 @@ public class Square implements Shape {
 
     @Override
     public String getShapeName() {
-        return "Square";
+        return "Triangle";
     }
 
     @Override
