@@ -21,15 +21,13 @@ public class WeatherForecast {
     }
 
     public double averageTemperature() {
-        Map<String, Double> averageTemperatureMap = new HashMap<>();
         double sum = 0;
         double average;
 
         for (Map.Entry<String, Double> temperature: temperatures.getTemperatures().entrySet()) {
-            averageTemperatureMap.put(temperature.getKey(), temperature.getValue());
             sum = sum + temperature.getValue();
         }
-        average = sum / averageTemperatureMap.size();
+        average = sum / temperatures.getTemperatures().size();
         return average;
     }
 
