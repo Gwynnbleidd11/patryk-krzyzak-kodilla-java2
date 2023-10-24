@@ -8,6 +8,16 @@ public class KodillaSpringApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(KodillaSpringApplication.class, args);
+
+		MultiConstructorTest test = new MultiConstructorTest("test");
+		MultiConstructorTest test2 = new MultiConstructorTest(2);
+
+		int result = Fibbonaci.calculateFibbonaci(15);
+		System.out.println(result);
 	}
+
+
+
+
 
 }
