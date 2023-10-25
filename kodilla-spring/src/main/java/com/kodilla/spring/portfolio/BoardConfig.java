@@ -11,17 +11,17 @@ public class BoardConfig {
 
     @Bean
     public TaskList toDoList() {
-        return new TaskList(new ArrayList<>());
+        return new TaskList();
     }
 
     @Bean
     public TaskList inProgressList() {
-        return new TaskList(new ArrayList<>());
+        return new TaskList();
     }
 
     @Bean
     public TaskList doneList() {
-        return new TaskList(new ArrayList<>());
+        return new TaskList();
     }
 
     @Bean
