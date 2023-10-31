@@ -12,8 +12,10 @@ public class KodillaSpringApplication {
 		MultiConstructorTest test = new MultiConstructorTest("test");
 		MultiConstructorTest test2 = new MultiConstructorTest(2);
 
-		int result = Fibbonaci.calculateFibbonaci(15);
+		int result = Fibonacci.calculateFibonacci(15);
+		int result2 = Fibonacci.recursionFibonacci(15);
 		System.out.println(result);
+		System.out.println(result2);
 	}
 
 
