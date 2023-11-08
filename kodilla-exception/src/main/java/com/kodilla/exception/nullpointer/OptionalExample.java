@@ -12,4 +12,6 @@ public class OptionalExample {
 
         optionalUser.ifPresent(u -> System.out.println(u.getName()));
     }
+
+
 }
