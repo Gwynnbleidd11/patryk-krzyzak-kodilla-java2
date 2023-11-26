@@ -6,6 +6,10 @@ import org.antlr.v4.runtime.misc.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
+@NamedQuery(
+        name = "Company.retrieveCompaniesWith3FirstLetters",
+        query = "from Company where substring(name, 1, 3) = :PARAM"
+)
 @Entity
 @Table(name = "COMPANIES")
 public class Company {
