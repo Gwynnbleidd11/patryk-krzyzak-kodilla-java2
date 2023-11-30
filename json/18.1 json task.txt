@@ -1,0 +1,23 @@
+{
+    "carName":"Mondeo",
+    "carBrand":"Ford,
+    "carSeats":[
+    "carSeat1":{
+        "material":"skóra",
+        "color":"czarny"
+    },
+    "carSeat2":{
+            "material":"zwykłaTapicerkaMateriałowa",
+            "color":"szary"
+    },
+    "carSeat3":{
+            "material":"welur",
+            "color":"beż"
+    },
+    "carSeat4":{
+            "material":"skóraEkologiczna",
+            "color":"czerwony"
+    }
+    ],
+    "engineCapacity":2.5
+}
