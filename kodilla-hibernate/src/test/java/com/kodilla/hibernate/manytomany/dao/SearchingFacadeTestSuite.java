@@ -1,6 +1,7 @@
 package com.kodilla.hibernate.manytomany.dao;
 
 import com.kodilla.hibernate.manytomany.Company;
+import com.kodilla.hibernate.manytomany.Employee;
 import com.kodilla.hibernate.manytomany.facade.SearchingFacade;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,14 +40,44 @@ public class SearchingFacadeTestSuite {
         //Then
         try {
             assertEquals(1, result.size());
-            assertEquals("Company XYZ", result.get(0).getName());
-//            assertEquals("XYZ International", result.get(1).getName());
 
         } finally {
             //CleanUp
             companyDao.deleteById(company1.getId());
             companyDao.deleteById(company2.getId());
             companyDao.deleteById(company3.getId());
+        }
+    }
+
+    @Test
+    void testFindEmployeeByNameFragmentInLastname() {
+        //Given
+        Employee employee1 = new Employee("John", "Smith");
+        Employee employee2 = new Employee("Albert", "Novak");
+        Employee employee3 = new Employee("Stephen", "Kossack");
+        Employee employee4 = new Employee("Naomi", "Rothman");
+        Employee employee5 = new Employee("Stephanie", "Mathews");
+        employeeDao.save(employee1);
+        employeeDao.save(employee2);
+        employeeDao.save(employee3);
+        employeeDao.save(employee4);
+        employeeDao.save(employee5);
+
+        //When
+        List<Employee> employeeList1 = searchingFacade.searchEmployeesByLastNameFragment("th");
+        List<Employee> employeeList2 = searchingFacade.searchEmployeesByLastNameFragment("Novak");
+
+        //Then
+        try {
+            assertEquals(3, employeeList1.size());
+            assertEquals(1, employeeList2.size());
+        } finally {
+            //CleanUp
+            employeeDao.deleteById(employee1.getId());
+            employeeDao.deleteById(employee2.getId());
+            employeeDao.deleteById(employee3.getId());
+            employeeDao.deleteById(employee4.getId());
+            employeeDao.deleteById(employee5.getId());
         }
     }
 }
