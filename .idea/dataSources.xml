@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="Local MySQL" uuid="ed6715f5-e721-4046-b2a3-01a3c456f2a9">
-      <driver-ref>mysql.8</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306</jdbc-url>
-      <working-dir>$ProjectFileDir$</working-dir>
-    </data-source>
     <data-source source="LOCAL" name="kodilla_course@localhost" uuid="fc1b3024-829e-42a7-94f8-fe3819f6d979">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>

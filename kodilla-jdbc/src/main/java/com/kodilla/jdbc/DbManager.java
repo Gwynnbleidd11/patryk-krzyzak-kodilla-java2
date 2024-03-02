@@ -11,7 +11,7 @@ public enum DbManager {
     INSTANCE;
     private Connection conn;
 
-    DbManager() {
+    private DbManager() {
         Properties connectionProps = new Properties();
         connectionProps.put("user", "kodilla_user");
         connectionProps.put("password", "kodilla_Pass123");
