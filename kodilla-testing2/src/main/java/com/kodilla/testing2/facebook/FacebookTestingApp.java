@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
+import java.time.Duration;
+
 public class FacebookTestingApp {
     private final static String XPATH_COOKIES = "//div[contains(@class, '_4-i2 _pig _al5h _al7j _50f4')]/div[4]/button[2]";
     private final static String XPATH_ACCOUNT_CREATION = "//form[contains(@class, '_9vtf')]/div[5]/a";
@@ -18,11 +20,13 @@ public class FacebookTestingApp {
 
     public static void main(String[] args) {
 
-        WebDriver driver = WebDriverConfig.getDriver(WebDriverConfig.FIREFOX);
+        WebDriver driver = WebDriverConfig.getDriver(WebDriverConfig.CHROME);
         driver.get("https://www.facebook.com/");
 
         driver.findElement(By.xpath(XPATH_COOKIES)).click();
         driver.findElement(By.xpath(XPATH_ACCOUNT_CREATION)).click();
+
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 
         WebElement day = driver.findElement(By.xpath(XPATH_DAY));
         Select selectDay = new Select(day);
